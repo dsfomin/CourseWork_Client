@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/user_to_main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Back To Main" />
+
+    <TextView
+        android:id="@+id/user_gps_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Calculated by GPS:"
+        android:layout_below="@id/user_to_main_button"
+        />
+
+    <LinearLayout
+        android:id="@+id/user_layout_longitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/user_gps_info">
+
+        <TextView
+            android:id="@+id/user_text_view_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/user_edit_text_longitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/user_edit_text_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/user_text_view_longitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/user_text_view_longitude"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/user_layout_latitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/user_layout_longitude">
+
+
+        <TextView
+            android:id="@+id/user_text_view_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/user_edit_text_latitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/user_edit_text_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/user_text_view_latitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/user_text_view_latitude"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/user_layout_altitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/user_layout_latitude">
+
+
+        <TextView
+            android:id="@+id/user_text_view_altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/user_edit_text_latitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/user_edit_text_altitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/user_text_view_latitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/user_text_view_latitude"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_server_gps_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Calculated by Server:"
+        android:layout_below="@id/user_layout_altitude"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/user_connect_server_button"
+        android:layout_below="@id/user_server_gps_info">
+
+        <LinearLayout
+            android:id="@+id/user_connection_info_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/user_connect_server_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Connect to server" />
+
+</RelativeLayout>
+
+

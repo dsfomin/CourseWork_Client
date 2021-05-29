@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.gpsplus.georef.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_RefFragment"
+            app:destination="@id/RefFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_UserFragment"
+            app:destination="@id/UserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RefFragment"
+        android:name="com.gpsplus.georef.RefFragment"
+        android:label="RefFragment"
+        tools:layout="@layout/fragment_ref">
+
+        <action
+            android:id="@+id/action_RefFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UserFragment"
+        android:name="com.gpsplus.georef.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_UserFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+</navigation>

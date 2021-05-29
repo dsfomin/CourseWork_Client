@@ -1,50 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_server"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/connect_server"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:onClick="onClick"
-        android:text="Connect to server" />
+        android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
-    <EditText
-        android:id="@+id/edMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/connect_server"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Message from Client" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/send_data"
-        android:layout_below="@+id/edMessage">
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
-            android:id="@+id/msgList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+    <include layout="@layout/content_main" />
 
-    </ScrollView>
-
-    <Button
-        android:id="@+id/send_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/button_pressed"
-        android:onClick="onClick"
-        android:text="Send Message to server"
-        android:textColor="@android:color/white" />
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

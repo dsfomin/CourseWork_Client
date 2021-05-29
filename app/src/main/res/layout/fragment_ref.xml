@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/ref_to_main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Back To Main" />
+
+    <LinearLayout
+        android:id="@+id/ref_layout_longitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/ref_to_main_button">
+
+        <TextView
+            android:id="@+id/ref_text_view_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ref_edit_text_longitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <EditText
+            android:id="@+id/ref_edit_text_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/ref_text_view_longitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ref_text_view_longitude"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:inputType="none"
+            android:labelFor="@id/ref_text_view_longitude"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ref_layout_latitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/ref_layout_longitude">
+
+
+        <TextView
+            android:id="@+id/ref_text_view_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ref_edit_text_latitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <EditText
+            android:id="@+id/ref_edit_text_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/ref_text_view_latitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ref_text_view_latitude"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:inputType="none"
+            android:labelFor="@id/ref_text_view_latitude"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ref_layout_altitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_below="@id/ref_layout_latitude">
+
+
+        <TextView
+            android:id="@+id/ref_text_view_altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altitude:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ref_edit_text_latitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <EditText
+            android:id="@+id/ref_edit_text_altitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@id/ref_text_view_latitude"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ref_text_view_latitude"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:inputType="none"
+            android:labelFor="@id/ref_text_view_altitude"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ref_connect_server_button"
+        android:layout_below="@id/ref_layout_altitude">
+
+        <LinearLayout
+            android:id="@+id/ref_connection_info_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ref_connect_server_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Connect to server" />
+
+</RelativeLayout>
+
+
